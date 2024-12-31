@@ -5,9 +5,12 @@
     --foreground-3: #A4A6A8;
     --foreground-4: #9A9C9E;
     --text-color: #000000;
+    --funny-color: #90c058;
+    --link-color: #4c89ff;
     --padding-large: 30px;
     --padding: 10px;
     --transition-speed: 0.1s;
+    --logo-size : 2rem;
     --logo-sun-display : none;
     --logo-moon-display : block;
 
@@ -20,8 +23,20 @@
     --foreground-3: #303030;
     --foreground-4: #424242;
     --text-color: #FFFFFF;
+    --funny-color: #90c058;
+    --link-color: #4c89ff;
     --logo-sun-display : block;
     --logo-moon-display : none;
+}
+
+a, a:link, a:visited{
+    color:var(--link-color);
+    text-decoration: none;
+    transition: color var(--transition-speed) ease;
+}
+
+a:hover{
+    color: var(--funny-color);
 }
 
 * {
@@ -42,6 +57,7 @@ body{
     flex-direction:row;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .navbar-flexbox-right{
@@ -51,19 +67,38 @@ body{
     margin: 0;
     padding: var(--padding);
     gap: var(--padding);
+    flex-wrap: wrap;
 }
 
 .navbar-flexbox-left{
     display: flex;
     flex-direction: row;
     justify-content: left;
+    align-items: center;
+    margin: 0;
+    gap: var(--padding);
+    flex-wrap: wrap;
+
+}
+
+.navbar-flexbox-vertical{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
     margin: 0;
     padding: var(--padding);
-    gap: var(--padding);
 }
 
 .name-flexbox{
     display: flex;
+}
+
+.paragraph_1{
+    padding: var(--padding-large);
+}
+
+.paragraph_1 p{
+    padding: var(--padding);
 }
 
 .portrait{
@@ -74,8 +109,13 @@ body{
     margin: var(--padding-large);
 }
 
+.footer{
+    padding: var(--padding-large);
+    color: var(--foreground-4);
+}
+
 .center{
     margin: auto;
-    max-width: 1000px;
+    max-width: 800px;
     background-color: var(--foreground-1);
 }

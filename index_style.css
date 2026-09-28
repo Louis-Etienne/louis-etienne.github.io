@@ -102,7 +102,6 @@ body{
 }
 
 .portrait{
-    width: 150px;
     height: 150px;
     border-radius: 100%;
     border: solid var(--text-color) 5px;
